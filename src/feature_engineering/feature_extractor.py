@@ -116,11 +116,11 @@ class FeatureExtractor:
         
         # Calculate velocity
         now = dt
-        count_1h = sum(1 for t in history if (now - t['timestamp']).seconds <= 3600)
-        count_24h = sum(1 for t in history if (now - t['timestamp']).seconds <= 86400)
+        count_1h = sum(1 for t in history if (now - t['timestamp']).total_seconds() <= 3600)
+        count_24h = sum(1 for t in history if (now - t['timestamp']).total_seconds() <= 86400)
         
-        amount_1h = sum(t['amount'] for t in history if (now - t['timestamp']).seconds <= 3600)
-        amount_24h = sum(t['amount'] for t in history if (now - t['timestamp']).seconds <= 86400)
+        amount_1h = sum(t['amount'] for t in history if (now - t['timestamp']).total_seconds() <= 3600)
+        amount_24h = sum(t['amount'] for t in history if (now - t['timestamp']).total_seconds() <= 86400)
         
         return {
             'velocity_1h': count_1h,
