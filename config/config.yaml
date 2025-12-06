@@ -1,0 +1,39 @@
+# Configuration for Real-Time Fraud Detection Pipeline
+
+kafka:
+  bootstrap_servers:
+    - "localhost:9092"
+  consumer_group: "fraud-detection-consumer"
+  topics:
+    transactions: "transactions"
+    alerts: "fraud-alerts"
+  
+model:
+  path: "models/fraud_detection_model.pkl"
+  scaler_path: "models/scaler.pkl"
+  threshold: 0.7
+  model_type: "xgboost"
+  
+features:
+  numerical:
+    - amount
+    - transaction_hour
+    - transaction_day
+    - merchant_category_code
+  categorical:
+    - transaction_type
+    - merchant_name
+  derived:
+    - amount_z_score
+    - velocity_1h
+    - velocity_24h
+
+monitoring:
+  metrics_port: 8000
+  log_level: "INFO"
+  alert_threshold: 0.8
+
+api:
+  host: "0.0.0.0"
+  port: 5000
+  debug: false
