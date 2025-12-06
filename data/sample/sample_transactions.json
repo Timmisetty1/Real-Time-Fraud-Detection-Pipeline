@@ -1,0 +1,49 @@
+[
+  {
+    "transaction_id": "tx001",
+    "user_id": "user1001",
+    "amount": 45.99,
+    "merchant_name": "Coffee Shop",
+    "merchant_category_code": 5814,
+    "transaction_type": "purchase",
+    "timestamp": "2024-01-01T09:15:00Z"
+  },
+  {
+    "transaction_id": "tx002",
+    "user_id": "user1002",
+    "amount": 125.50,
+    "merchant_name": "Amazon",
+    "merchant_category_code": 5999,
+    "transaction_type": "purchase",
+    "timestamp": "2024-01-01T10:30:00Z"
+  },
+  {
+    "transaction_id": "tx003",
+    "user_id": "user1001",
+    "amount": 3500.00,
+    "merchant_name": "Electronics Store",
+    "merchant_category_code": 5732,
+    "transaction_type": "purchase",
+    "timestamp": "2024-01-01T11:45:00Z",
+    "note": "Potentially fraudulent - high amount"
+  },
+  {
+    "transaction_id": "tx004",
+    "user_id": "user1003",
+    "amount": 67.25,
+    "merchant_name": "Gas Station",
+    "merchant_category_code": 5541,
+    "transaction_type": "purchase",
+    "timestamp": "2024-01-01T13:20:00Z"
+  },
+  {
+    "transaction_id": "tx005",
+    "user_id": "user1002",
+    "amount": 4250.00,
+    "merchant_name": "Online Retailer",
+    "merchant_category_code": 5999,
+    "transaction_type": "purchase",
+    "timestamp": "2024-01-01T23:30:00Z",
+    "note": "Potentially fraudulent - high amount at night"
+  }
+]
